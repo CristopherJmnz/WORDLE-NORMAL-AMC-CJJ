@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORDLE</title>
+    <link rel="stylesheet" href="wordle.css">
+    <script src="wordle.js">
+    </script>
+    <script src="swal.js"></script>
+</head>
+<body onload="focusCaja1() ; document.getElementById('reiniciar').style.display='none' ">
+    <div id="dark-btn">
+        <img src="modo-oscuro.png" alt="DarkMode" onclick="modo()" id="modo">
+    </div>
+    <p id="titulo">WORDLE</p>
+    <hr>
+        <div id="container-tabla">
+            <div id="flags" >
+                <img src="esp.png" alt="" onclick="cambioIdioma('esp')"><br>
+                <img src="uk.png" alt="" onclick="cambioIdioma('eng')">
+            </div>
+            <table id="tabla">
+                <tr>
+                    <td><input type="text" class="fila1" maxlength="1" id="caja1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja2.focus()" ></td>
+                    <td><input type="text" class="fila1" maxlength="1" id="caja2" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja3.focus()"></td>
+                    <td><input type="text" class="fila1" maxlength="1" id="caja3" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja4.focus()"></td>
+                    <td><input type="text" class="fila1" maxlength="1" id="caja4" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja5.focus()"></td>
+                    <td><input type="text" class="fila1" maxlength="1" id="caja5"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="fila2" maxlength="1" id="caja6" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja7.focus()" disabled></td>
+                    <td><input type="text" class="fila2" maxlength="1" id="caja7" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja8.focus()" disabled></td>
+                    <td><input type="text" class="fila2" maxlength="1" id="caja8" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja9.focus()" disabled></td>
+                    <td><input type="text" class="fila2" maxlength="1" id="caja9" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja10.focus()" disabled></td>
+                    <td><input type="text" class="fila2" maxlength="1" id="caja10" disabled></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="fila3" maxlength="1" id="caja11" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja12.focus()" disabled></td>
+                    <td><input type="text" class="fila3" maxlength="1" id="caja12" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja13.focus()" disabled></td>
+                    <td><input type="text" class="fila3" maxlength="1" id="caja13" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja14.focus()" disabled></td>
+                    <td><input type="text" class="fila3" maxlength="1" id="caja14" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja15.focus()" disabled></td>
+                    <td><input type="text" class="fila3" maxlength="1" id="caja15" disabled></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="fila4" maxlength="1" id="caja16" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja17.focus()" disabled></td>
+                    <td><input type="text" class="fila4" maxlength="1" id="caja17" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja18.focus()" disabled></td>
+                    <td><input type="text" class="fila4" maxlength="1" id="caja18" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja19.focus()" disabled></td>
+                    <td><input type="text" class="fila4" maxlength="1" id="caja19" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja20.focus()" disabled></td>
+                    <td><input type="text" class="fila4" maxlength="1" id="caja20" disabled></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="fila5" maxlength="1" id="caja21" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja22.focus()" disabled></td>
+                    <td><input type="text" class="fila5" maxlength="1" id="caja22" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja23.focus()" disabled></td>
+                    <td><input type="text" class="fila5" maxlength="1" id="caja23" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja24.focus()" disabled></td>
+                    <td><input type="text" class="fila5" maxlength="1" id="caja24" onkeyup="if (this.value.length == this.getAttribute('maxlength')) caja25.focus()" disabled></td>
+                    <td><input type="text" class="fila5" maxlength="1" id="caja25" disabled></td>
+                </tr>
+            </table>
+        </div>
+        <div class="btn" id="comprobar">
+            <button class="jugar" onclick="comprobar()" >COMPROBAR</button>
+        </div>
+        <div class="btn" id="reiniciar">
+            <button class="jugar" onclick="reiniciar()" >REINICIAR</button>
+        </div> 
+        <footer id="footer">
+            Designed by Andrea Martínez & Cristopher Jiménez
+        </footer>
+</body>
+</html>

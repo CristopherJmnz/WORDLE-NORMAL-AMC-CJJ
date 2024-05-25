@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.port": 5501,
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b02ee561-10b7-41ac-a606-9158c9c712b2/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/Wordle-AMC-CJJ",
+    "appService.deploySubpath": "."
+}
